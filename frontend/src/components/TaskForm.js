@@ -25,13 +25,12 @@ const TaskForm = ({taskDetails, addTask, viewTask, editTask, fetchData}) => {
         console.log(formData)
         const token = Cookies.get('jwtToken')
 
-        // let url = taskDetails ? 
-        // `https://fullstack-tenant-management-system.onrender.com/tenants/${taskDetails.id}`
-        // : 'https://fullstack-tenant-management-system.onrender.com/tenants'
+        let url = taskDetails ? `https://indpro-task-manager-application-backend.onrender.com/api/tasks/${taskDetails._id}`
+         : 'https://indpro-task-manager-application-backend.onrender.com/api/tasks'
 
-        let url = taskDetails ? 
-        `http://localhost:5000/api/tasks/${taskDetails._id}`
-         : 'http://localhost:5000/api/tasks'
+        // let url = taskDetails ? 
+        // `http://localhost:5000/api/tasks/${taskDetails._id}`
+        //  : 'http://localhost:5000/api/tasks'
 
         const options = {
             method:  taskDetails ? 'PATCH' : 'POST',

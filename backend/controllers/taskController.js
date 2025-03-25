@@ -52,8 +52,8 @@ exports.getTask = async (req, res) => {
 // Update a task
 exports.updateTask = async (req, res) => {
   try {
-    const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(updatedTask);
+    await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json({message: "Task updated successfully"});
   } catch (err) {
     res.status(400).json({ error: err.message });
   }

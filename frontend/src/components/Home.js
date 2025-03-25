@@ -21,8 +21,8 @@ const Home = () => {
   const navigate = useNavigate()
 
   const token = Cookies.get('jwtToken')
-  let url = 'http://localhost:5000/api/tasks'
-  //let url = 'nnn'
+  //let url = 'http://localhost:5000/api/tasks'
+  let url = 'https://indpro-task-manager-application-backend.onrender.com/api/tasks'
   
   // fetching tasks
   const fetchTasks = useCallback(async () => {

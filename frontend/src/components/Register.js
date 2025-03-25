@@ -23,8 +23,8 @@ const Register = () => {
   const handlerForm = async(e) => {
     setIsLoading(true)
     e.preventDefault()
-    //let url = ''
-    let url = 'http://localhost:5000/api/auth/register'
+    let url = 'https://indpro-task-manager-application-backend.onrender.com/api/auth/register'
+    //let url = 'http://localhost:5000/api/auth/register'
 
     if (userData.password === confirmPassword) {
       const options = {

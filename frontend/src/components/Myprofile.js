@@ -15,9 +15,8 @@ const Myprofile = () => {
   const navigate = useNavigate(); 
 
   const token = Cookies.get('jwtToken')
-  //const url = 'https://fullstack-tenant-management-system.onrender.com/profile'
-
-   let url = 'http://localhost:5000/api/profile'
+  let url = 'https://indpro-task-manager-application-backend.onrender.com/api/profile'
+  //let url = 'http://localhost:5000/api/profile'
 
   const getUserProfile =  useCallback(async () => {
     if (!token) {
